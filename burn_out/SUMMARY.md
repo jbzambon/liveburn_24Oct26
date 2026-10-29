@@ -8,7 +8,7 @@ Sky: FEW/SCT before 16:50Z, then BKN at 3,800–5,000 ft through 18:51Z.
 
 | Dataset | Time UTC (EDT) | Magnitude | Notes |
 |---|---|---|---|
-| **KRAX Level II** (VCP 35) | first aloft 17:32Z (13:32); peak 17:40–17:58Z (13:40–13:58); back to baseline ~18:20Z (14:20) | Downwind wedge (SW, 0.5–8 km): gates ≥15 dBZ go from a baseline of 2–18 to **159** (0.2°) and **204** (1.3°). Plume gates: REF median 18–22 dBZ, max 35–40 dBZ; **RHOHV median 0.63–0.74** (background 0.87–0.93); 50–60% of gates have RHOHV < 0.7. | Elongated plume 2–9 km SW of the site, along the wind. It is absent in the upwind and cross-wind wedges. It shows at 0.2–2.4° and not at 3.1° or above, so the top is about 0.8–1 km. It first appeared at mid-levels (0.9–1.8°) at 17:32Z. ZDR is *not* distinctive: the plume's ZDR spread (std ~3 dB) is smaller than the insect background's (std ~4.5 dB). |
+| **KRAX Level II** (VCP 35) | first aloft 17:32Z (13:32); peak 17:40–17:58Z (13:40–13:58); back to baseline ~18:20Z (14:20) | Downwind wedge (SW, 0.5–8 km): gates ≥15 dBZ go from a baseline of 2–18 to **159** (0.2°) and **204** (1.3°). Plume gates: REF median 18–22 dBZ, max 35–40 dBZ; **RHOHV median 0.63–0.74** (background 0.87–0.93); 50–60% of gates have RHOHV < 0.7. | Elongated plume 2–9 km SW of the site, along the wind. It is absent in the upwind and cross-wind wedges. It shows at 0.2–2.4° and not at 3.1° or above, so the top is about 0.8–1 km AGL (2.4° is ~810 m and 3.1° ~1,010 m above the site's ground). It first appeared at mid-levels (0.9–1.8°) at 17:32Z. ZDR is *not* distinctive: the plume's ZDR spread (std ~3 dB) is smaller than the insect background's (std ~4.5 dB). |
 | **TDWR TRDU Level III** (TZ0/TZ1, 0.3°/1.0°) | 17:27–17:51Z (13:27–13:51), peak 17:45Z | Downwind gates ≥15 dBZ: baseline 0–1, up to **24**; max 25 dBZ. Upwind 0–2. | An independent radar with different viewing geometry confirms the KRAX plume. That rules out a KRAX-specific artifact. |
 | **FIRMS VIIRS S-NPP** | 18:13Z (14:13) | Detection 0.18 km from the site; FRP **3.1 MW**; BT I4 330.4 K; nominal confidence | Nothing within 3 km on any other day in the 7-day file, so this is not a static hot spot. |
 | **FIRMS VIIRS NOAA-20** | 18:32Z (14:32) | Detection 0.34 km from the site; FRP **1.4 MW**; BT I4 328.4 K; nominal | The decaying fire or debris pile. |
@@ -45,7 +45,7 @@ Sky: FEW/SCT before 16:50Z, then BKN at 3,800–5,000 ft through 18:51Z.
 
 ## Timeline
 
-* 17:27–17:32Z: smoke plume first seen by both radars, aloft at ~0.3–0.8 km.
+* 17:27–17:32Z: smoke plume first seen by both radars, aloft at ~0.3–0.9 km AGL.
 * 17:40–17:58Z: plume peak.
 * 17:47Z: possible single-minute GOES flicker.
 * ~18:20Z: plume gone.

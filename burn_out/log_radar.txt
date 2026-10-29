@@ -1,4 +1,12 @@
 
+## You are using the Python ARM Radar Toolkit (Py-ART), an open source
+## library for working with weather radar data. Py-ART is partly supported
+## by the U.S. Department of Energy Office of Science as part of
+## the Atmospheric Radiation Measurement (ARM) User Facility.
+##
+## If you use this software to prepare a publication, please cite:
+##
+##     JJ Helmus and SM Collis, JORS 2016, doi: 10.5334/jors.119
 
 [radar] 25 KRAX volumes
   15:57:34 vcp=35 sweeps=10 2km echo=168 plume-like=29 6km plume-like=184

@@ -5,6 +5,10 @@ import numpy as np
 import pyart
 import burn_hunt as B
 
+lines = ["",
+         "KRAX plume gates: downwind wedge (225+/-30 deg from site, 0.5-8 km), REF>=15 dBZ, tilts 0.2-2.4 deg",
+         "vs. same criteria in the 3 non-downwind wedges (background clear-air/insect echo);"
+         " hgt is beam-centre height AGL at the site"]
 for f in sorted(glob.glob(os.path.join(B.L2DIR, "KRAX20261024_1[678]*"))):
     t = f.split("_")[-2]
     if not ("1723" <= t[:4] <= "1808" or t[:4] == "1640"):
@@ -12,7 +16,7 @@ for f in sorted(glob.glob(os.path.join(B.L2DIR, "KRAX20261024_1[678]*"))):
     r = pyart.io.read_nexrad_archive(f)
     sx, sy = B.site_xy(r)
     P = {"ref": [], "rho": [], "zdr": [], "z": []}
-    Q = {"rho": [], "zdr": []}
+    Q = {"rho": [], "zdr": [], "n": 0}
     for s, e in B.unique_sweeps(r):
         if e > 2.5:
             continue
@@ -26,14 +30,21 @@ for f in sorted(glob.glob(os.path.join(B.L2DIR, "KRAX20261024_1[678]*"))):
         for k, v in zip(("ref", "rho", "zdr", "z"), (ref, rho, zdr, gz)):
             P[k] += list(v[m])
         o = ring & ~dw & (ref >= 15)
+        Q["n"] += int(o.sum())
         Q["rho"] += list(rho[o])
         Q["zdr"] += list(zdr[o])
     a = {k: np.array(v) for k, v in P.items()}
     b = {k: np.array(v) for k, v in Q.items()}
     if len(a["ref"]) < 3:
-        print(t, "n=", len(a["ref"]))
+        lines.append(f"{t[:2]}:{t[2:4]}Z n={len(a['ref'])}")
         continue
-    print(f"{t[:2]}:{t[2:4]}Z n={len(a['ref'])} REF med {np.nanmedian(a['ref']):.1f} "
-          f"RHOHV med {np.nanmedian(a['rho']):.2f} frac<0.7 {np.nanmean(a['rho'] < 0.7):.2f} "
-          f"ZDR std {np.nanstd(a['zdr']):.1f} | other wedges RHOHV med {np.nanmedian(b['rho']):.2f} "
-          f"ZDR std {np.nanstd(b['zdr']):.1f}")
+    lines.append(
+        f"{t[:2]}:{t[2:4]}Z n={len(a['ref']):4d} REF med {np.nanmedian(a['ref']):.1f} max {np.nanmax(a['ref']):.1f} | "
+        f"RHOHV med {np.nanmedian(a['rho']):.2f} frac<0.7 {np.nanmean(a['rho'] < 0.7):.2f} | "
+        f"ZDR med {np.nanmedian(a['zdr']):+.1f} std {np.nanstd(a['zdr']):.1f} | "
+        f"p95 hgt {np.nanpercentile(a['z'], 95):.0f} m AGL || other n={b['n']} "
+        f"RHOHV med {np.nanmedian(b['rho']):.2f} ZDR std {np.nanstd(b['zdr']):.1f}")
+
+print("\n".join(lines))
+with open(os.path.join(B.OUT, "krax_plume_dualpol.txt"), "w") as fh:
+    fh.write("\n".join(lines) + "\n")
