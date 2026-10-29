@@ -27,6 +27,7 @@ import matplotlib.pyplot as plt
 from goesgeo import latlon_to_xy, xy_to_latlon
 
 LAT, LON = 35.723114, -78.673519
+SITE_GROUND_M = 103.7   # ground elevation at the site, m MSL (USGS 3DEP)
 DAY = dt.date(2026, 10, 24)
 DOY = 297
 T0 = pd.Timestamp("2026-10-24 16:00", tz="UTC")
@@ -482,8 +483,10 @@ def ngates(radar):
 
 
 def gate_xyz(radar, s, edges=False):
+    """Gate x, y (m from KRAX) and z as height AGL at the site (Py-ART z is above the antenna)."""
     n = ngates(radar) + (1 if edges else 0)
-    return [a[:, :n] for a in radar.get_gate_x_y_z(s, edges=edges)]
+    x, y, z = [a[:, :n] for a in radar.get_gate_x_y_z(s, edges=edges)]
+    return x, y, z + float(radar.altitude["data"][0]) - SITE_GROUND_M
 
 
 def sweep_fields(radar, s):
@@ -546,7 +549,7 @@ def run_radar():
                 continue
             dd = np.hypot(gx - sx, gy - sy)
             row = dict(time_utc=t, time_edt=edt(t), vcp=vcp, elev=elev,
-                       beam_hgt_site_m=float(np.nanmedian(gz[dd < 1000])) if (dd < 1000).any() else np.nan)
+                       beam_agl_site_m=float(np.nanmedian(gz[dd < 1000])) if (dd < 1000).any() else np.nan)
             row.update(gate_stats(ref, rho, zdr, dd <= 2000, "r2km"))
             row.update(gate_stats(ref, rho, zdr, dd <= 6000, "r6km"))
             # controls: same range, other azimuths, 2 km radius
@@ -583,7 +586,7 @@ def run_radar():
         ref, rho, zdr = sweep_fields(radar, s0)
         X, Y = (gxe - sx) / 1000, (gye - sy) / 1000
         if pd.Timestamp("2026-10-24 16:30", tz="UTC") <= t <= pd.Timestamp("2026-10-24 19:05", tz="UTC"):
-            # 4th panel: 1.3 deg REF (~400 m AGL at the site), where the plume is strongest
+            # 4th panel: 1.3 deg REF (~450 m AGL at the site), where the plume is strongest
             s13 = min(sweeps, key=lambda se: abs(se[1] - 1.3))[0]
             gxu, gyu, _ = gate_xyz(radar, s13, edges=True)
             ref13 = sweep_fields(radar, s13)[0]
@@ -608,7 +611,7 @@ def run_radar():
             burn = BURN0 <= t < BURN1
             fig.suptitle(f"KRAX {sweeps[0][1]:.1f} deg  {t:%H:%M:%S}Z ({edt(t)})  site range "
                          f"{rng_site/1000:.1f} km az {az_site:.0f}  beam ~"
-                         f"{rows[-1]['beam_hgt_site_m']:.0f} m" + ("  [BURNDOWN]" if burn else ""),
+                         f"{rows[-1]['beam_agl_site_m']:.0f} m AGL" + ("  [BURNDOWN]" if burn else ""),
                          color="red" if burn else "k")
             fig.tight_layout()
             if pd.Timestamp("2026-10-24 17:00", tz="UTC") <= t <= pd.Timestamp("2026-10-24 19:00", tz="UTC"):
@@ -700,7 +703,7 @@ def run_radar():
     for e, g in td.groupby("elev"):
         if e <= 4.1:
             ax[2].plot(g.time_utc, g["wdown225_n15"], ".-",
-                       label=f"{e:.1f} deg (~{g.beam_hgt_site_m.median():.0f} m at site)")
+                       label=f"{e:.1f} deg (~{g.beam_agl_site_m.median():.0f} m AGL at site)")
     ax[2].set_ylabel("downwind gates REF>=15")
     for a in ax:
         shade_burn(a)
