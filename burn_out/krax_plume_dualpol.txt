@@ -1,0 +1,11 @@
+
+
+KRAX plume gates: downwind wedge (225+/-30 deg from site, 0.5-8 km), REF>=15 dBZ, tilts 0.2-2.4 deg
+vs. same criteria in the 3 non-downwind wedges (background clear-air/insect echo)
+16:40Z n=  37 REF med 18.0 max 26.5 | RHOHV med 0.86 frac<0.7 0.14 | ZDR med +3.4 std 3.1 | p95 hgt 490 m || other n=51 RHOHV med 0.98 ZDR std 5.2
+17:23Z n=   4 REF med 19.2 max 27.5 | RHOHV med 0.97 frac<0.7 0.00 | ZDR med +3.5 std 2.7 | p95 hgt 556 m || other n=74 RHOHV med 0.90 ZDR std 4.7
+17:32Z n= 193 REF med 18.0 max 33.5 | RHOHV med 0.74 frac<0.7 0.46 | ZDR med +2.2 std 3.1 | p95 hgt 839 m || other n=55 RHOHV med 0.93 ZDR std 4.2
+17:40Z n= 630 REF med 19.5 max 40.0 | RHOHV med 0.69 frac<0.7 0.52 | ZDR med +2.2 std 2.8 | p95 hgt 673 m || other n=54 RHOHV med 0.90 ZDR std 4.4
+17:49Z n= 616 REF med 22.0 max 35.0 | RHOHV med 0.63 frac<0.7 0.62 | ZDR med +2.5 std 2.8 | p95 hgt 514 m || other n=68 RHOHV med 0.91 ZDR std 4.6
+17:58Z n= 387 REF med 18.5 max 29.5 | RHOHV med 0.67 frac<0.7 0.55 | ZDR med +1.8 std 3.4 | p95 hgt 483 m || other n=70 RHOHV med 0.87 ZDR std 4.2
+18:07Z n= 129 REF med 18.0 max 26.5 | RHOHV med 0.73 frac<0.7 0.43 | ZDR med +2.0 std 3.2 | p95 hgt 500 m || other n=95 RHOHV med 0.90 ZDR std 4.3

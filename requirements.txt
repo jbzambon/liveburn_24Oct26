@@ -1,0 +1,16 @@
+s3fs
+xarray
+h5netcdf
+h5py
+netCDF4
+arm_pyart
+cmweather
+metpy
+matplotlib
+requests
+pandas
+numpy
+scipy
+pyproj
+imageio
+skyfield

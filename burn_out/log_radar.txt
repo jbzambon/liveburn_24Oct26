@@ -1,0 +1,54 @@
+
+
+[radar] 25 KRAX volumes
+  15:57:34 vcp=35 sweeps=10 2km echo=168 plume-like=29 6km plume-like=184
+  16:05:54 vcp=35 sweeps=10 2km echo=201 plume-like=8 6km plume-like=171
+  16:14:39 vcp=35 sweeps=10 2km echo=232 plume-like=12 6km plume-like=232
+  16:23:26 vcp=35 sweeps=10 2km echo=279 plume-like=15 6km plume-like=201
+  16:32:12 vcp=35 sweeps=10 2km echo=295 plume-like=29 6km plume-like=231
+  16:40:31 vcp=35 sweeps=10 2km echo=309 plume-like=19 6km plume-like=238
+  16:49:02 vcp=35 sweeps=10 2km echo=285 plume-like=18 6km plume-like=228
+  16:57:28 vcp=35 sweeps=10 2km echo=272 plume-like=13 6km plume-like=229
+  17:06:14 vcp=35 sweeps=10 2km echo=266 plume-like=19 6km plume-like=242
+  17:14:59 vcp=35 sweeps=10 2km echo=271 plume-like=19 6km plume-like=261
+  17:23:30 vcp=35 sweeps=10 2km echo=261 plume-like=23 6km plume-like=256
+  17:32:01 vcp=35 sweeps=10 2km echo=288 plume-like=33 6km plume-like=324
+  17:40:46 vcp=35 sweeps=10 2km echo=314 plume-like=40 6km plume-like=335
+  17:49:32 vcp=35 sweeps=10 2km echo=311 plume-like=37 6km plume-like=383
+  17:58:17 vcp=35 sweeps=10 2km echo=313 plume-like=29 6km plume-like=367
+  18:07:02 vcp=35 sweeps=10 2km echo=301 plume-like=46 6km plume-like=362
+  18:15:48 vcp=35 sweeps=10 2km echo=304 plume-like=34 6km plume-like=352
+  18:24:34 vcp=35 sweeps=10 2km echo=301 plume-like=39 6km plume-like=278
+  18:33:19 vcp=35 sweeps=10 2km echo=315 plume-like=30 6km plume-like=340
+  18:42:05 vcp=35 sweeps=10 2km echo=315 plume-like=35 6km plume-like=318
+  18:50:50 vcp=35 sweeps=10 2km echo=308 plume-like=29 6km plume-like=302
+  18:59:36 vcp=35 sweeps=10 2km echo=301 plume-like=34 6km plume-like=312
+  19:09:37 vcp=35 sweeps=10 2km echo=318 plume-like=44 6km plume-like=332
+  19:18:22 vcp=35 sweeps=10 2km echo=319 plume-like=39 6km plume-like=321
+  19:27:08 vcp=35 sweeps=10 2km echo=304 plume-like=33 6km plume-like=381
+                    time_utc  elev  r2km_necho  r2km_nplume  r6km_nplume  r6km_nplume_nonpersist  ctrl2km_nplume_mean  r2km_refmax  r6km_rhomed
+0  2026-10-24 15:57:34+00:00   0.2         168           29          184                      25               38.000         17.5     0.901667
+1  2026-10-24 16:05:54+00:00   0.2         201            8          171                      41               35.500         13.0     0.905000
+2  2026-10-24 16:14:39+00:00   0.2         232           12          232                      66               47.375         15.0     0.908333
+3  2026-10-24 16:23:26+00:00   0.2         279           15          201                      38               37.750          8.5     0.901667
+4  2026-10-24 16:32:12+00:00   0.2         295           29          231                      56               37.000          9.0     0.901667
+5  2026-10-24 16:40:31+00:00   0.2         309           19          238                      47               43.000         13.5     0.898333
+6  2026-10-24 16:49:02+00:00   0.2         285           18          228                      63               38.875         17.0     0.891667
+7  2026-10-24 16:57:28+00:00   0.2         272           13          229                      81               35.000         17.0     0.888333
+8  2026-10-24 17:06:14+00:00   0.2         266           19          242                      59               36.625          8.5     0.885000
+9  2026-10-24 17:14:59+00:00   0.2         271           19          261                      85               30.625         27.0     0.885000
+10 2026-10-24 17:23:30+00:00   0.2         261           23          256                      92               39.250         10.0     0.891667
+11 2026-10-24 17:32:01+00:00   0.2         288           33          324                      94               33.250         21.0     0.878333
+12 2026-10-24 17:40:46+00:00   0.2         314           40          335                      88               40.625         31.5     0.878333
+13 2026-10-24 17:49:32+00:00   0.2         311           37          383                      89               33.000         22.5     0.875000
+14 2026-10-24 17:58:17+00:00   0.2         313           29          367                     127               38.250         12.0     0.871667
+15 2026-10-24 18:07:02+00:00   0.2         301           46          362                      89               48.250         13.0     0.865000
+16 2026-10-24 18:15:48+00:00   0.2         304           34          352                     101               33.125         18.5     0.868333
+17 2026-10-24 18:24:34+00:00   0.2         301           39          278                      83               38.250         18.5     0.875000
+18 2026-10-24 18:33:19+00:00   0.2         315           30          340                      98               45.750         17.0     0.871667
+19 2026-10-24 18:42:05+00:00   0.2         315           35          318                     101               36.625         25.5     0.875000
+20 2026-10-24 18:50:50+00:00   0.2         308           29          302                      89               35.000         18.5     0.875000
+21 2026-10-24 18:59:36+00:00   0.2         301           34          312                      91               50.500         18.0     0.871667
+22 2026-10-24 19:09:37+00:00   0.2         318           44          332                     108               37.375         13.5     0.878333
+23 2026-10-24 19:18:22+00:00   0.2         319           39          321                      99               42.125         20.5     0.875000
+24 2026-10-24 19:27:08+00:00   0.2         304           33          381                     115               46.125         16.0     0.868333

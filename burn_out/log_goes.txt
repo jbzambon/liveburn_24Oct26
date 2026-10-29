@@ -1,0 +1,33 @@
+[goes conus] wrote 42 rows
+[goes meso1] 210 scan times, band2 for 210
+  [goes meso1] 16:00
+  [goes meso1] 16:10
+  [goes meso1] 16:20
+  [goes meso1] 16:30
+  [goes meso1] 16:40
+  [goes meso1] 16:50
+  [goes meso1] 17:00
+  [goes meso1] 17:10
+  [goes meso1] 17:20
+  [goes meso1] 17:30
+  [goes meso1] 17:40
+  [goes meso1] 17:50
+  [goes meso1] 18:00
+  [goes meso1] 18:10
+  [goes meso1] 18:20
+  [goes meso1] 18:30
+  [goes meso1] 18:40
+  [goes meso1] 18:50
+  [goes meso1] 19:00
+  [goes meso1] 19:10
+  [goes meso1] 19:20
+[goes meso1] wrote 210 rows
+[fdc] FDCC: 42 files
+[fdc] FDCM1: 210 files
+[fdc] fire pixels within 6 km: 0
+product  mask
+FDCC     100      26
+         215      16
+FDCM1    100     134
+         215      76
+dtype: int64

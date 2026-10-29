@@ -1,0 +1,7 @@
+Overpasses of Raleigh, 2026-10-24 (sensor-view zenith = satellite elevation complement; VIIRS edge ~70 deg, MODIS edge ~65 deg)
+NOAA 20 (JPSS-1)     18:32:50Z (14:32 EDT)  max elev  70.3  -> view zenith ~19.7 deg  az   265
+NOAA 21 (JPSS-2)     17:36:20Z (13:36 EDT)  max elev  39.1  -> view zenith ~50.9 deg  az    69
+NOAA 21 (JPSS-2)     19:16:30Z (15:16 EDT)  max elev  22.9  -> view zenith ~67.1 deg  az   264
+SUOMI NPP            18:13:10Z (14:13 EDT)  max elev  65.9  -> view zenith ~24.1 deg  az    71
+TERRA                14:21:20Z (10:21 EDT)  max elev  73.6  -> view zenith ~16.4 deg  az   290
+AQUA                 20:43:00Z (16:43 EDT)  max elev  76.7  -> view zenith ~13.3 deg  az   245
